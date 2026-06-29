@@ -23,14 +23,14 @@ const navItems = [
 // Per-letter chaos for the cinematic UNDERTOW title:
 // size, vertical offset, rotation, and right margin.
 const LETTER_CHAOS = [
-  { size: 'text-6xl sm:text-7xl md:text-8xl', y: '-10px', rotate: '-3deg', spacing: '0.02em' },
-  { size: 'text-7xl sm:text-8xl md:text-9xl', y: '14px', rotate: '2deg', spacing: '-0.04em' },
-  { size: 'text-5xl sm:text-6xl md:text-7xl', y: '-4px', rotate: '-2deg', spacing: '0.01em' },
-  { size: 'text-8xl sm:text-9xl md:text-[10rem]', y: '20px', rotate: '4deg', spacing: '-0.02em' },
-  { size: 'text-6xl sm:text-7xl md:text-8xl', y: '-14px', rotate: '-4deg', spacing: '0em' },
-  { size: 'text-7xl sm:text-8xl md:text-9xl', y: '8px', rotate: '1deg', spacing: '-0.03em' },
-  { size: 'text-5xl sm:text-6xl md:text-7xl', y: '-8px', rotate: '-1deg', spacing: '0.02em' },
-  { size: 'text-8xl sm:text-9xl md:text-[10rem]', y: '16px', rotate: '5deg', spacing: '-0.02em' },
+  { size: 'text-7xl sm:text-8xl md:text-9xl', y: '-14px', rotate: '-3deg', spacing: '-0.03em' },
+  { size: 'text-8xl sm:text-9xl md:text-[11rem]', y: '18px', rotate: '2deg', spacing: '-0.06em' },
+  { size: 'text-6xl sm:text-7xl md:text-8xl', y: '-6px', rotate: '-2deg', spacing: '-0.02em' },
+  { size: 'text-9xl sm:text-[10rem] md:text-[15rem]', y: '26px', rotate: '4deg', spacing: '-0.04em' },
+  { size: 'text-7xl sm:text-8xl md:text-9xl', y: '-18px', rotate: '-4deg', spacing: '-0.03em' },
+  { size: 'text-8xl sm:text-9xl md:text-[11rem]', y: '10px', rotate: '1deg', spacing: '-0.05em' },
+  { size: 'text-6xl sm:text-7xl md:text-8xl', y: '-10px', rotate: '-1deg', spacing: '-0.02em' },
+  { size: 'text-9xl sm:text-[10rem] md:text-[15rem]', y: '22px', rotate: '5deg', spacing: '-0.04em' },
 ]
 
 export function Hero() {
@@ -149,29 +149,14 @@ export function Hero() {
 
       {/* Heading */}
       <div
-        className="pointer-events-none absolute left-0 right-0 top-[12%] z-50 flex flex-col items-center px-5 text-center"
+        className="pointer-events-none absolute left-0 right-0 top-[16%] z-50 flex flex-col items-center px-2 text-center sm:top-[14%]"
         style={{ fontFamily: "'Inter', sans-serif" }}
       >
-        <h1 className="flex flex-col items-center gap-2 sm:gap-4">
-          {/* Chinese subtitle - dark metallic seal */}
+        <h1 className="flex flex-col items-center">
+          {/* Main title: UNDERTOW - cinematic metal lettering */}
           <span
-            className="hero-anim hero-reveal font-[family-name:var(--font-ma-shan-zheng)] text-3xl font-normal tracking-[0.12em] text-transparent sm:text-4xl md:text-5xl"
-            style={{
-              animationDelay: '0.2s',
-              backgroundImage: 'linear-gradient(180deg, #e5e5e5 0%, #9ca3af 40%, #4b5563 100%)',
-              WebkitBackgroundClip: 'text',
-              backgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.9)) drop-shadow(0 0 18px rgba(220,38,38,0.25))',
-            }}
-          >
-            暗流涌动
-          </span>
-
-          {/* Main title: UNDERTOW - Harry Potter / cinematic metal lettering */}
-          <span
-            className="hero-anim hero-reveal flex select-none items-baseline justify-center leading-[0.85]"
-            style={{ animationDelay: '0.35s' }}
+            className="hero-anim hero-reveal flex select-none items-baseline justify-center leading-[0.82]"
+            style={{ animationDelay: '0.3s' }}
           >
             {'UNDERTOW'.split('').map((letter, i) => {
               const chaos = LETTER_CHAOS[i]
@@ -181,20 +166,24 @@ export function Hero() {
                   className={`font-[family-name:var(--font-metal-mania)] ${chaos.size} inline-block text-transparent`}
                   style={{
                     backgroundImage:
-                      'linear-gradient(175deg, #ffffff 0%, #d4d4d4 18%, #737373 40%, #e5e5e5 55%, #525252 78%, #a3a3a3 100%)',
+                      'linear-gradient(178deg, #ffffff 0%, #c0c0c0 10%, #6b6b6b 26%, #e8e8e8 42%, #404040 58%, #b0b0b0 74%, #f5f5f5 88%, #7a7a7a 100%)',
                     WebkitBackgroundClip: 'text',
                     backgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     transform: `translateY(${chaos.y}) rotate(${chaos.rotate})`,
                     filter: `
+                      brightness(1.08)
+                      contrast(1.15)
                       drop-shadow(0 1px 0 #000)
                       drop-shadow(0 1px 0 #1a0505)
                       drop-shadow(0 1px 0 #220808)
                       drop-shadow(0 1px 0 #2a0a0a)
                       drop-shadow(0 1px 0 #330d0d)
-                      drop-shadow(0 2px 6px rgba(0,0,0,0.9))
-                      drop-shadow(0 0 24px rgba(220,38,38,0.45))
-                      drop-shadow(0 0 48px rgba(220,38,38,0.2))
+                      drop-shadow(0 1px 0 #3d0f0f)
+                      drop-shadow(0 3px 8px rgba(0,0,0,0.95))
+                      drop-shadow(0 0 28px rgba(220,38,38,0.55))
+                      drop-shadow(0 0 56px rgba(220,38,38,0.3))
+                      drop-shadow(0 -1px 1px rgba(255,255,255,0.15))
                     `,
                     marginRight: chaos.spacing,
                   }}
@@ -207,8 +196,8 @@ export function Hero() {
 
           {/* Tagline */}
           <span
-            className="hero-anim hero-reveal mt-2 text-xs font-light uppercase tracking-[0.3em] text-white/60 sm:text-sm"
-            style={{ animationDelay: '0.6s' }}
+            className="hero-anim hero-reveal mt-4 text-xs font-light uppercase tracking-[0.35em] text-white/55 sm:mt-6 sm:text-sm"
+            style={{ animationDelay: '0.55s' }}
           >
             金属现场与社区
           </span>
