@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Metal+Mania&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #000000;
+  --color-foreground: #e5e5e5;
+  --color-card: #111111;
+  --color-card-foreground: #e5e5e5;
+  --color-popover: #111111;
+  --color-popover-foreground: #e5e5e5;
+  --color-primary: #dc2626;
+  --color-primary-foreground: #000000;
+  --color-secondary: #374151;
+  --color-secondary-foreground: #e5e5e5;
+  --color-muted: #1f1f1f;
+  --color-muted-foreground: #9ca3af;
+  --color-accent: #7f1d1d;
+  --color-accent-foreground: #e5e5e5;
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #333333;
+  --color-input: #333333;
+  --color-ring: #dc2626;
+  --font-bebas-neue: "Bebas Neue", sans-serif;
+  --font-metal-mania: "Metal Mania", cursive;
+  --radius: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-bebas-neue), system-ui, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
