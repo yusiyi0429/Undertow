@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Metal+Mania&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Metal+Mania&family=Ma+Shan+Zheng&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&display=swap');
 @import "tailwindcss";
 
 @theme inline {
@@ -23,6 +23,7 @@
   --color-ring: #dc2626;
   --font-bebas-neue: "Bebas Neue", sans-serif;
   --font-metal-mania: "Metal Mania", cursive;
+  --font-ma-shan-zheng: "Ma Shan Zheng", cursive;
   --font-inter: "Inter", sans-serif;
   --font-playfair: "Playfair Display", serif;
   --radius: 0.25rem;

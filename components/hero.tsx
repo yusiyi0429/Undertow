@@ -131,14 +131,14 @@ export function Hero() {
       >
         <h1 className="leading-[0.95] text-white [text-shadow:0_4px_30px_rgba(0,0,0,0.8)]">
           <span
-            className="hero-anim hero-reveal block font-[family-name:var(--font-playfair)] text-5xl font-normal italic sm:text-7xl md:text-8xl"
-            style={{ letterSpacing: '-0.05em', animationDelay: '0.25s' }}
+            className="hero-anim hero-reveal block font-[family-name:var(--font-ma-shan-zheng)] text-6xl font-normal sm:text-8xl md:text-9xl"
+            style={{ letterSpacing: '0.08em', animationDelay: '0.25s' }}
           >
             暗流涌动
           </span>
           <span
-            className="hero-anim hero-reveal block text-5xl font-normal sm:text-7xl md:text-8xl"
-            style={{ letterSpacing: '-0.08em', animationDelay: '0.42s' }}
+            className="hero-anim hero-reveal block text-4xl font-normal sm:text-6xl md:text-7xl"
+            style={{ letterSpacing: '-0.04em', animationDelay: '0.42s' }}
           >
             金属现场与社区
           </span>
@@ -163,12 +163,12 @@ export function Hero() {
         <p className="text-xs leading-relaxed text-white/80 sm:text-sm">
           在这里发现演出、探索乐队、分享现场。滑动光标，探照这片土地下燃烧的金属暗流。
         </p>
-        <a
-          href="#events"
+        <Link
+          href="/bands"
           className="rounded-full bg-primary px-7 py-3 text-sm font-medium text-primary-foreground transition-all hover:scale-[1.03] hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 active:scale-95"
         >
           探索演出
-        </a>
+        </Link>
       </div>
     </section>
   )
