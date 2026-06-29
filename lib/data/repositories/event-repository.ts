@@ -4,3 +4,8 @@ export interface EventRepository {
   getEvents(): Promise<Event[]>
   getEventById(id: string): Promise<Event | null>
 }
+
+export const eventRepository: EventRepository = {
+  getEvents: async () => [],
+  getEventById: async () => null,
+}
