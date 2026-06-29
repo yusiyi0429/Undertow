@@ -34,3 +34,6 @@ next-env.d.ts
 
 # superpowers brainstorming artifacts
 .superpowers/
+
+# runtime logs
+/logs
