@@ -8,13 +8,15 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
-      <main className="mx-auto max-w-5xl px-4 py-16">
+      {/* Smooth transition from hero into content */}
+      <div className="relative -mt-32 h-32 bg-gradient-to-b from-transparent to-background" />
+      <main id="events" className="relative mx-auto max-w-5xl px-4 pb-24 pt-8">
         <div className="space-y-8">
           <div className="space-y-2">
             <h2 className="font-[family-name:var(--font-bebas-neue)] text-5xl tracking-widest text-primary">
               近期演出
             </h2>
-            <p className="text-muted-foreground">
+            <p className="font-[family-name:var(--font-inter)] text-muted-foreground">
               聚焦国内金属现场，不错过任何一场演出。
             </p>
           </div>
