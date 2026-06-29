@@ -225,21 +225,6 @@ export function Hero() {
         </p>
       </div>
 
-      {/* Bottom-right block */}
-      <div
-        className="hero-anim hero-fade absolute bottom-10 left-5 right-5 z-50 flex max-w-full flex-col items-start gap-4 sm:bottom-24 sm:left-auto sm:right-10 sm:max-w-[280px] sm:gap-5 md:right-14"
-        style={{ animationDelay: '0.85s', fontFamily: "'Inter', sans-serif" }}
-      >
-        <p className="text-xs leading-relaxed text-white/80 sm:text-sm">
-          在这里发现演出、探索乐队、分享现场。滑动光标，探照这片土地下燃烧的金属暗流。
-        </p>
-        <Link
-          href="/bands"
-          className="rounded-full bg-primary px-7 py-3 text-sm font-medium text-primary-foreground transition-all hover:scale-[1.03] hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 active:scale-95"
-        >
-          探索演出
-        </Link>
-      </div>
     </section>
   )
 }
