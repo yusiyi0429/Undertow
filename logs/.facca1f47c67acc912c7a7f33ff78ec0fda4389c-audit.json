@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/mnt/d/my-workspace/metalhead/logs/.facca1f47c67acc912c7a7f33ff78ec0fda4389c-audit.json",
+    "files": [
+        {
+            "date": 1782729110658,
+            "name": "/mnt/d/my-workspace/metalhead/logs/mcp-puppeteer-2026-06-29.log",
+            "hash": "f91bc660c2890c9470dd9a9c4477678d22ae9b2b94408e55760d111b88d95299"
+        }
+    ],
+    "hashType": "sha256"
+}

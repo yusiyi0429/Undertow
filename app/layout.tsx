@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Navbar } from "@/components/navbar";
+import { Navigation } from "@/components/navigation";
 
 export const metadata: Metadata = {
   title: "Undertow · 暗流涌动",
@@ -15,8 +15,8 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body className="antialiased">
-        <Navbar />
-        <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+        <Navigation />
+        {children}
       </body>
     </html>
   );
