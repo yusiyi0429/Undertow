@@ -20,7 +20,7 @@ export function Navbar() {
           href="/"
           className="font-[family-name:var(--font-bebas-neue)] text-3xl tracking-widest text-primary"
         >
-          METALHEAD
+          UNDERTOW
         </Link>
         <ul className="flex items-center gap-6">
           {navItems.map((item) => (
