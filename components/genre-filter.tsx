@@ -14,10 +14,10 @@ export function GenreFilter({ genres, selected, onChange }: GenreFilterProps) {
           key={genre}
           onClick={() => onChange(genre)}
           className={cn(
-            'rounded-full px-4 py-2 text-sm font-bold uppercase tracking-wide transition-colors',
+            'rounded-full px-5 py-2 text-xs font-bold uppercase tracking-widest transition-all duration-200',
             selected === genre
-              ? 'bg-primary text-primary-foreground'
-              : 'border border-secondary bg-card text-foreground hover:border-primary hover:text-primary'
+              ? 'bg-primary text-black shadow-lg shadow-primary/30'
+              : 'border border-white/10 bg-white/5 text-white/70 hover:border-primary/50 hover:text-white'
           )}
         >
           {genre}

@@ -15,8 +15,7 @@ const BG_IMAGE_2 =
 
 const navItems = [
   { label: '首页', href: '/', active: true },
-  { label: '演出日历', href: '/bands' },
-  { label: '乐队百科', href: '/community' },
+  { label: '乐队百科', href: '/bands' },
   { label: '社区动态', href: '/community' },
 ]
 
@@ -125,6 +124,7 @@ export function Hero() {
             <Link
               key={item.label}
               href={item.href}
+              prefetch={true}
               className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
                 item.active
                   ? 'text-white'

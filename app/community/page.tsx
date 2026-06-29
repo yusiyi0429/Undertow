@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react'
 import { PostCard } from '@/components/post-card'
 import { PostForm } from '@/components/post-form'
+import { PageShell } from '@/components/page-shell'
+import { PageHeader } from '@/components/page-header'
 import { Post } from '@/lib/data/types'
 
 const STORAGE_KEY = 'metalhead-posts'
@@ -49,25 +51,24 @@ export default function CommunityPage() {
   }
 
   return (
-    <div className="space-y-8">
-      <div className="space-y-2">
-        <h1 className="font-[family-name:var(--font-bebas-neue)] text-5xl tracking-widest text-primary">
-          社区动态
-        </h1>
-        <p className="text-muted-foreground">分享现场、乐队与金属生活。</p>
+    <PageShell>
+      <PageHeader
+        title="社区动态"
+        subtitle="分享现场、乐队与金属生活。这里没有门槛，只有失真和共鸣。"
+      />
+      <div className="space-y-8">
+        <PostForm onSubmit={handleAddPost} />
+
+        {posts.length === 0 ? (
+          <p className="text-white/50">还没有动态，做第一个发帖的人。</p>
+        ) : (
+          <div className="space-y-4">
+            {posts.map((post) => (
+              <PostCard key={post.id} post={post} />
+            ))}
+          </div>
+        )}
       </div>
-
-      <PostForm onSubmit={handleAddPost} />
-
-      {posts.length === 0 ? (
-        <p className="text-muted-foreground">还没有动态，做第一个发帖的人。</p>
-      ) : (
-        <div className="space-y-4">
-          {posts.map((post) => (
-            <PostCard key={post.id} post={post} />
-          ))}
-        </div>
-      )}
-    </div>
+    </PageShell>
   )
 }

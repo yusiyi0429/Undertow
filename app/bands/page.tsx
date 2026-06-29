@@ -1,19 +1,18 @@
 import { mockBandRepository } from '@/lib/data/mock/bands'
 import { BandsList } from '@/components/bands-list'
+import { PageShell } from '@/components/page-shell'
+import { PageHeader } from '@/components/page-header'
 
 export default async function BandsPage() {
   const bands = await mockBandRepository.getBands()
 
   return (
-    <div className="space-y-8">
-      <div className="space-y-2">
-        <h1 className="font-[family-name:var(--font-bebas-neue)] text-5xl tracking-widest text-primary">
-          乐队百科
-        </h1>
-        <p className="text-muted-foreground">按流派探索金属乐队。</p>
-      </div>
-
+    <PageShell>
+      <PageHeader
+        title="乐队百科"
+        subtitle="按流派探索金属乐队。从地下传奇到现役军团，记录每一支撕裂夜晚的声音。"
+      />
       <BandsList bands={bands} />
-    </div>
+    </PageShell>
   )
 }
