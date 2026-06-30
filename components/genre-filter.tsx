@@ -16,8 +16,8 @@ export function GenreFilter({ genres, selected, onChange }: GenreFilterProps) {
           className={cn(
             'rounded-full px-5 py-2 text-xs font-bold uppercase tracking-widest transition-all duration-200',
             selected === genre
-              ? 'bg-primary text-black shadow-lg shadow-primary/30'
-              : 'border border-white/10 bg-white/5 text-white/70 hover:border-primary/50 hover:text-white'
+              ? 'bg-[#ff1a1a] text-black shadow-lg shadow-[#ff1a1a]/30'
+              : 'border border-[#330a0a] bg-[#0a0000] text-[#ff9999] hover:border-[#ff1a1a]/50 hover:text-white'
           )}
         >
           {genre}

@@ -22,18 +22,18 @@ export function Navbar() {
             width="26"
             height="26"
             viewBox="0 0 256 256"
-            fill="#dc2626"
+            fill="#ff1a1a"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d="M 256 256 L 128 256 L 0 128 L 128 128 Z M 256 128 L 128 128 L 0 0 L 128 0 Z" />
           </svg>
-          <span className="font-[family-name:var(--font-metal-mania)] text-2xl text-white">
+          <span className="font-[family-name:var(--font-nosifer)] text-xl text-white">
             Undertow
           </span>
         </Link>
 
         {/* Center pill */}
-        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-full border border-white/30 bg-white/10 px-2 py-2 backdrop-blur-md md:flex">
+        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-full border border-[#ff1a1a]/35 bg-black/50 px-2 py-2 backdrop-blur-md md:flex">
           {navItems.map((item) => {
             const active = pathname === item.href
             return (
@@ -43,7 +43,7 @@ export function Navbar() {
                 prefetch={true}
                 className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
                   active
-                    ? 'text-white'
+                    ? 'text-[#ff4d4d]'
                     : 'text-white/80 hover:bg-white/20 hover:text-white'
                 }`}
               >
@@ -58,7 +58,7 @@ export function Navbar() {
           <Link
             href="/community"
             prefetch={true}
-            className="hidden rounded-full border border-white/30 bg-white/10 px-6 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/20 md:block"
+            className="hidden rounded-full border border-[#ff1a1a]/55 bg-[#ff1a1a]/20 px-6 py-2.5 text-sm font-semibold text-[#ff4d4d] backdrop-blur-md transition-colors hover:bg-[#ff1a1a]/30 md:block"
           >
             加入社区
           </Link>

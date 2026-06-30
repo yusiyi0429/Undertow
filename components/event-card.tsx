@@ -8,21 +8,29 @@ interface EventCardProps {
 
 export function EventCard({ event }: EventCardProps) {
   return (
-    <Card className="group overflow-hidden border-l-4 border-l-primary bg-[#0a0a0a] ring-1 ring-white/5 transition-all duration-300 hover:border-primary/80 hover:bg-[#111111] hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/20">
-      <CardContent className="p-5">
-        <div className="mb-2 text-xs font-medium uppercase tracking-wider text-white/50">
+    <Card className="group overflow-hidden border-l-[5px] border-l-[#ff1a1a] bg-gradient-to-br from-[#0a0000] to-[#050000] ring-1 ring-[#330a0a] transition-all duration-300 hover:border-[#ff1a1a]/80 hover:shadow-lg hover:shadow-[#ff1a1a]/20 hover:ring-[#ff1a1a]/30">
+      <div className="relative h-[140px] overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(/images/horror/dark-hero.jpg)` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#050000]" />
+      </div>
+      <CardContent className="relative space-y-3 p-5">
+        <div
+          className="absolute -top-7 right-5 h-14 w-14 rounded-full border-2 border-[#ff1a1a] bg-cover bg-center shadow-lg shadow-[#ff1a1a]/40"
+          style={{ backgroundImage: `url(/images/horror/black-sand-texture.jpg)` }}
+        />
+        <p className="text-xs font-medium uppercase tracking-wider text-[#ff9999]">
           {event.date}
-        </div>
-        <h3 className="mb-2 font-[family-name:var(--font-bebas-neue)] text-2xl uppercase tracking-wide text-white">
+        </p>
+        <h3 className="font-[family-name:var(--font-nosifer)] text-2xl leading-none text-white">
           {event.bandName}
         </h3>
-        <p className="mb-3 text-sm text-white/60">
+        <p className="text-sm text-white/60">
           {event.city} · {event.venue}
         </p>
-        <Badge
-          variant="secondary"
-          className="bg-primary/15 text-primary hover:bg-primary/25"
-        >
+        <Badge className="border-transparent bg-[#ff1a1a]/15 text-[#ff4d4d] hover:bg-[#ff1a1a]/25">
           {event.genre}
         </Badge>
       </CardContent>

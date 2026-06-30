@@ -5,8 +5,11 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, subtitle }: PageHeaderProps) {
   return (
-    <div className="mb-10 space-y-3">
-      <h1 className="font-[family-name:var(--font-metal-mania)] text-5xl text-white sm:text-6xl md:text-7xl">
+    <div className="relative mb-10 space-y-3 border-l-[5px] border-[#ff1a1a] pl-6">
+      <h1
+        className="font-[family-name:var(--font-nosifer)] text-5xl text-[#ff1a1a] sm:text-6xl md:text-7xl"
+        style={{ textShadow: '0 0 20px rgba(255,26,26,0.5)' }}
+      >
         {title}
       </h1>
       {subtitle && (
@@ -15,10 +18,9 @@ export function PageHeader({ title, subtitle }: PageHeaderProps) {
         </p>
       )}
       <div
-        className="h-0.5 w-24 rounded-full"
+        className="h-[3px] w-28 rounded-full"
         style={{
-          background:
-            'linear-gradient(90deg, #dc2626 0%, rgba(220,38,38,0.2) 100%)',
+          background: 'linear-gradient(90deg, #ff1a1a 0%, transparent 100%)',
         }}
       />
     </div>
